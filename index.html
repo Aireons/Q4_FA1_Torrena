@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form onsubmit="return myFunction();">
+        <fieldset form="login" id="logins">
+            <legend>Log-in Credentials: </legend>
+        <label for="FullName">Input your Full name:</label>
+        <input type="text" id="FullName" name="FullName"></br>
+        
+        <label for="UserName">Input your Username:</label>
+        <input type="text" id="UserName" name="UserName"></br>
+        
+        <label for="password">Input your Password:</label>
+        <input type = "password" id="pass" name="password"></br>
+        
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" name="Email"></br>
+        
+        <label for="address">Full home address:</label>
+        <input type="text" id="address" name="address"></br>
+        
+       <label for="age">Enter your age:</label>
+        <input type="number" id="age" name="age" min="0" max="200"></br>
+        
+        <label for="selfinterests">Type down your interests: </label></br>
+        <textarea id="selfinterests" name="selfinterests" rows="3" cols="40"> </textarea></br>
+        
+        <label for="gender">Select your gender</label><br>
+            <select name="gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="I prefer not to say">I prefer not to say</option>
+            </select></br>
+        
+        <input type="submit">
+        <input type = "reset" value = "Reset">
+    </fieldset>
+</form>
+<p id="demo1">
+<p id="demo2">
+<p id="demo3">
+<p id="demo4">
+<p id="demo5">
+<p id="demo6">
+<p id="demo7">
+<p id="demo8">
+</p>
+<script>
+function myFunction(){
+var x = document.getElementById("FullName").value;
+document.getElementById("demo1").innerHTML = "Full name: " + x;
+
+var y = document.getElementById("UserName").value;
+document.getElementById("demo2").innerHTML = "Username: " + y;
+
+var z = document.getElementById("pass").value;
+document.getElementById("demo3").innerHTML = "Password: " + z;
+
+var a = document.getElementById("Email").value;
+document.getElementById("demo4").innerHTML = "Email address: " + a;
+
+var b = document.getElementById("address").value;
+document.getElementById("demo5").innerHTML = "Address: " + b;
+
+var c = document.getElementById("age").value;
+document.getElementById("demo6").innerHTML = "You are " + c + " years old.";
+
+var d = document.getElementById("selfinterests").value;
+document.getElementById("demo7").innerHTML = "You are interested in " + d;
+
+var e = document.getElementById("gender").value;
+document.getElementById("demo8").innerHTML = "Your gender is " + e;
+return false;
+}
+
+function blurFunction() {
+  if(logins==" "){
+    document.getElementById("myInput").style.background = "red";
+  }
+  else
+  {
+    document.getElementById("myInput").style.background = "lightgreen";
+  }
+}
+</script>
+
+
+</body>
+</html>
